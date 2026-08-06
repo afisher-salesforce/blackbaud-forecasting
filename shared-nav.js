@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
     <div class="group-label">Appendix</div>
     <ul class="nav-list">
+      <li><a href="next-steps.html">Recommended Next Steps</a></li>
       <li><a href="external-research.html">External Research</a></li>
       <li><a href="forward-looking-statement.html">Forward Looking Statement</a></li>
     </ul>
