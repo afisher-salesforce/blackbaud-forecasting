@@ -8,6 +8,7 @@
   --accent-strong: #0a3f77;
   --line: #d6dde8;
   --success: #0f766e;
+  --topbar-height: 60px;
 }
 
 * {
@@ -20,6 +21,31 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.55;
+  padding-top: var(--topbar-height);
+}
+
+.top-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--topbar-height);
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  z-index: 1200;
+}
+
+.top-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 386px;
+  padding-right: 12px;
+  transition: padding-left 0.25s ease;
+}
+
+.nav-collapsed .top-inner {
+  padding-left: 12px;
 }
 
 .layout {
@@ -34,7 +60,7 @@ body {
   border-right: 1px solid #1f2a44;
   padding: 20px 18px 30px;
   position: fixed;
-  top: 0;
+  top: var(--topbar-height);
   left: 0;
   bottom: 0;
   overflow-y: auto;
@@ -59,10 +85,7 @@ body {
 }
 
 .nav-toggle {
-  position: fixed;
-  top: 12px;
-  left: 385px;
-  z-index: 999;
+  position: static;
   border: 1px solid var(--line);
   background: #ffffff;
   color: var(--accent-strong);
@@ -71,10 +94,6 @@ body {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-}
-
-.nav-collapsed .nav-toggle {
-  left: 12px;
 }
 
 .brand-block h1 {
@@ -308,6 +327,9 @@ h2 {
   .main,
   .nav-collapsed .main {
     padding: 26px 18px 40px;
+  }
+  .top-inner {
+    padding-left: 12px;
   }
   .grid-2 {
     grid-template-columns: 1fr;
