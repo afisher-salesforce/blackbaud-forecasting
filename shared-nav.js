@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="group-label">Architecture</div>
     <ul class="nav-list">
       <li><a href="capability-map.html">Capability Map & Sequencing</a></li>
+      <li><a href="decision-framework.html">Executive Decision Framework</a></li>
       <li><a href="salesforce-domains.html">Salesforce Capability Domains</a></li>
     </ul>
     <div class="group-label">Appendix</div>

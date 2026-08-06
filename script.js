@@ -10,7 +10,8 @@ const CAPABILITY_INDEX = [
   { code: "DUP", name: "Unified Customer Profile", description: "Single account and contact context for renewals and revenue expansion.", location: "Implementation-to-Renewal", pageTitle: "I2R Capability Focus", pageHref: "i2r-capabilities.html" },
   { code: "PGV", name: "Data Governance & Privacy", description: "Trust, auditability, and compliance guardrails for AI-assisted revenue execution.", location: "Platform confidence layer", pageTitle: "Salesforce Capability Domains", pageHref: "salesforce-domains.html" },
   { code: "CAF", name: "Agentforce in Slack", description: "Operationalizes forecast insight in the collaboration channels teams already use.", location: "Execution in flow of work", pageTitle: "Capability Map", pageHref: "capability-map.html" },
-  { code: "IEI", name: "Enterprise Integration", description: "Connects adjacent systems while keeping forecast decisioning in Salesforce.", location: "Consolidation strategy", pageTitle: "Salesforce Capability Domains", pageHref: "salesforce-domains.html" }
+  { code: "IEI", name: "Enterprise Integration", description: "Connects adjacent systems while keeping forecast decisioning in Salesforce.", location: "Consolidation strategy", pageTitle: "Salesforce Capability Domains", pageHref: "salesforce-domains.html" },
+  { code: "DFW", name: "Decision Framework", description: "Executive criteria for retiring Clari and Gong without disrupting flow-of-work execution.", location: "Consolidation governance", pageTitle: "Executive Decision Framework", pageHref: "decision-framework.html" }
 ];
 
 function setActiveNav() {
