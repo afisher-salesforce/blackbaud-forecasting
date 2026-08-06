@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <h1>Blackbaud Forecasting</h1>
       <p>Executive Discussion Site · Salesforce Account Team</p>
       <div class="logo-pill">
-        <img src="https://www.salesforce.com/content/dam/web/en_us/www/images/home/logo-salesforce.svg" alt="Salesforce logo">
+        <img src="public/salesforce-logo.jpg" alt="Salesforce logo">
       </div>
     </div>
     <div class="group-label">Search</div>
