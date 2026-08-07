@@ -108,12 +108,23 @@ body {
   font-size: 13px;
 }
 
+.logo-pill {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 3px;
+  padding: 5px 9px;
+  line-height: 0;
+}
+
 .brand-logo {
   display: block;
-  margin-top: 8px;
-  height: 40px;
+  margin-top: 0;
+  height: 20px;
   width: auto;
-  max-width: 100%;
+  max-width: none;
 }
 
 .group-label {

@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="brand-block">
       <h1>Blackbaud Forecasting</h1>
       <p>Executive Discussion Site · Salesforce Account Team</p>
-      <img class="brand-logo" src="public/salesforce-logo.jpg" alt="Salesforce logo">
+      <div class="logo-pill">
+        <img class="brand-logo" src="public/salesforce-logo.jpg" alt="Salesforce logo">
+      </div>
     </div>
     <div class="group-label">Search</div>
     <div class="search-wrap">
