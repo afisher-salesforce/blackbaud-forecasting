@@ -103,14 +103,14 @@ body {
 }
 
 .brand-block p {
-  margin: 8px 0 14px;
+  margin: 8px 0 6px;
   color: #aebcd3;
   font-size: 13px;
 }
 
 .brand-logo {
   display: block;
-  margin-top: 20px;
+  margin-top: 8px;
   height: 40px;
   width: auto;
   max-width: 100%;
