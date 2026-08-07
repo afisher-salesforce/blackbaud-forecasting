@@ -20,20 +20,21 @@ document.addEventListener("DOMContentLoaded", () => {
       <li><a href="index.html">Executive Summary</a></li>
       <li><a href="context.html">Account Context</a></li>
     </ul>
-    <div class="group-label">Vignettes</div>
+    <div class="group-label">Revenue Lifecycle Priorities</div>
     <ul class="nav-list">
-      <li><a href="a2r-capabilities.html">1. A2R Strategic Priorities</a></li>
-      <li><a href="i2r-capabilities.html">2. I2R Strategic Priorities</a></li>
+      <li><a href="a2r-capabilities.html">1. Awareness-to-Revenue (A2R)</a></li>
+      <li><a href="i2r-capabilities.html">2. Implementation-to-Renewal (I2R)</a></li>
     </ul>
     <div class="group-label">Architecture</div>
     <ul class="nav-list">
-      <li><a href="capability-map.html">Capability Map & Sequencing</a></li>
+      <li><a href="capability-map.html">Capability Sequencing</a></li>
       <li><a href="decision-framework.html">Executive Decision Framework</a></li>
       <li><a href="salesforce-domains.html">Salesforce Capability Domains</a></li>
     </ul>
     <div class="group-label">Appendix</div>
     <ul class="nav-list">
       <li><a href="next-steps.html">Recommended Next Steps</a></li>
+      <li><a href="capability-terms.html">Capability Terms Guide</a></li>
       <li><a href="external-research.html">External Research</a></li>
       <li><a href="forward-looking-statement.html">Forward Looking Statement</a></li>
     </ul>

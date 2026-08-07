@@ -17,12 +17,13 @@ Open `index.html` directly in a browser, or run any lightweight static server fr
 
 - `index.html` - Executive Summary
 - `context.html` - Account Context
-- `a2r-capabilities.html` - A2R Strategic Priorities
-- `i2r-capabilities.html` - I2R Strategic Priorities
-- `capability-map.html` - Capability Map & Sequencing
+- `a2r-capabilities.html` - Awareness-to-Revenue (A2R)
+- `i2r-capabilities.html` - Implementation-to-Renewal (I2R)
+- `capability-map.html` - Capability Sequencing
 - `decision-framework.html` - Executive Decision Framework
 - `salesforce-domains.html` - Salesforce Capability Domains
 - `next-steps.html` - Recommended Next Steps
+- `capability-terms.html` - Capability Terms Guide
 - `external-research.html` - External Research
 - `forward-looking-statement.html` - Forward Looking Statement
 
