@@ -106,8 +106,43 @@ function initSearch() {
   closeBtn.addEventListener("click", () => results.classList.remove("open"));
 }
 
+function initEnablement() {
+  const blocks = document.querySelectorAll("[data-enablement-codes]");
+  if (!blocks.length || !window.TrailheadEnablement) return;
+
+  blocks.forEach((block) => {
+    const codesAttr = block.getAttribute("data-enablement-codes") || "";
+    const title = block.getAttribute("data-enablement-title") || "Suggested Trailhead Enablement";
+    const codes = codesAttr.split(",").map((s) => s.trim()).filter(Boolean);
+    const items = window.TrailheadEnablement.getEnablementForCodes(codes, 3);
+    if (!items.length) return;
+
+    const cards = items.map((item) => `
+      <a class="enablement-card" href="${item.url}" target="_blank" rel="noreferrer">
+        <div class="enablement-title">${item.title}</div>
+        <div class="enablement-meta">
+          <span>${item.type}</span>
+          <span>${item.audience}</span>
+          <span>${item.level}</span>
+          <span>${window.TrailheadEnablement.formatLearningTime(item.timeMinutes)}</span>
+        </div>
+        <div class="enablement-why">${item.whyItMatters}</div>
+      </a>
+    `).join("");
+
+    block.innerHTML = `
+      <div class="enablement-head">
+        <h4>${title}</h4>
+        <span>Verified ${window.TrailheadEnablement.verifiedAt}</span>
+      </div>
+      <div class="enablement-grid">${cards}</div>
+    `;
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   setActiveNav();
   initNavToggle();
   initSearch();
+  initEnablement();
 });

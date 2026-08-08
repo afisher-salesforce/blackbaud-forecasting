@@ -31,4 +31,5 @@ Shared assets:
 
 - `styles.css`
 - `shared-nav.js`
+- `enablement.js`
 - `script.js`
