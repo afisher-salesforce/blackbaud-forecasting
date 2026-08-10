@@ -374,6 +374,56 @@ h2 {
   color: #4f6277;
 }
 
+.confidence-chip {
+  display: inline-block;
+  margin-top: 8px;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.confidence-confirmed {
+  background: #e6f7ef;
+  color: #137a45;
+}
+
+.confidence-inferred {
+  background: #fff8e6;
+  color: #8a5a00;
+}
+
+.confidence-pending {
+  background: #eef2f8;
+  color: #43566f;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.matrix-table th,
+.matrix-table td {
+  border-bottom: 1px solid #e7edf5;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.matrix-table th {
+  background: #f6f9ff;
+  color: #1f4068;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .progression {
   margin-top: 26px;
   display: flex;

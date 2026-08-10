@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="public/favicon.png">
+  <title>Requirements Coverage Matrix</title>
+  <link rel="stylesheet" href="https://sky.blackbaudcdn.net/static/skyux-design-tokens/6/base.css">
+  <link rel="stylesheet" href="https://sky.blackbaudcdn.net/static/skyux-design-tokens/6/blackbaud.css">
+  <link rel="stylesheet" href="https://sky.blackbaudcdn.net/static/skyux-design-tokens/6/public-api.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sky-theme-modern sky-theme-brand-base sky-theme-brand-blackbaud">
+  <header class="top-container">
+    <div class="top-inner">
+      <button id="navToggle" class="nav-toggle">Hide Navigation</button>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar"></aside>
+    <main class="main">
+      <h2>Requirements Coverage Matrix</h2>
+      <p class="subtitle">This matrix maps Blackbaud's updated forecasting requirements to Salesforce capability paths, implementation approach, and entitlement confidence.</p>
+
+      <section class="card">
+        <h3>Coverage Summary</h3>
+        <p><strong>Primary intent:</strong> move from capability narrative to requirement-verifiable execution planning.</p>
+        <p><strong>Evidence basis:</strong> Forecasting requirements response + Blackbaud asset line items + capabilities evidence matrix.</p>
+        <p><strong>Interpretation note:</strong> "Confirmed" indicates direct SKU evidence; "Inferred" indicates reasonable entitlement inference that still needs product-level validation.</p>
+      </section>
+
+      <section class="card" style="margin-top:18px;">
+        <h3>Must Requirements — Priority Mapping</h3>
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>Requirement Group</th>
+              <th>FR IDs</th>
+              <th>Salesforce Capability Path</th>
+              <th>Delivery Mode</th>
+              <th>Confidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cadence, rollup, completeness</td>
+              <td>FR-01, FR-02, FR-03</td>
+              <td>Collaborative Forecasting + hierarchy rollups + hygiene/status controls</td>
+              <td>OOTB + Config</td>
+              <td><span class="confidence-chip confidence-confirmed">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td>Trending, drill-down, AI call</td>
+              <td>FR-08, FR-09, FR-10</td>
+              <td>Revenue Intelligence + in-context editing + AI-assisted forecast layer</td>
+              <td>Config + Analytics</td>
+              <td><span class="confidence-chip confidence-inferred">Inferred / Validate</span></td>
+            </tr>
+            <tr>
+              <td>Signal intelligence and risk surfacing</td>
+              <td>FR-11, FR-12</td>
+              <td>Agentforce + CX intelligence signals + opportunity risk interpretation</td>
+              <td>Config + Integration</td>
+              <td><span class="confidence-chip confidence-confirmed">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td>Platform administration and access</td>
+              <td>FR-16, FR-17, FR-18</td>
+              <td>Core Salesforce UE admin controls, SSO integration, role lifecycle management</td>
+              <td>OOTB + Config</td>
+              <td><span class="confidence-chip confidence-confirmed">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td>Renewals data unification and live sync</td>
+              <td>FR-20, FR-21, FR-22</td>
+              <td>Data Cloud + Salesforce objects + Gainsight integration pattern</td>
+              <td>Integration + Data Modeling</td>
+              <td><span class="confidence-chip confidence-pending">Pending Integration Proof</span></td>
+            </tr>
+            <tr>
+              <td>Save plan and exception governance</td>
+              <td>FR-23, FR-24, FR-25, FR-32, FR-40</td>
+              <td>Signal-triggered workflows, task routing, pre-lock exception controls</td>
+              <td>Flow + Config</td>
+              <td><span class="confidence-chip confidence-confirmed">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td>Product-level forecast and joint risk view</td>
+              <td>FR-38, FR-39</td>
+              <td>Revenue Cloud/CPQ data layer + dashboard composition</td>
+              <td>Config + Analytics</td>
+              <td><span class="confidence-chip confidence-confirmed">Confirmed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card" style="margin-top:18px;">
+        <h3>Open Validation Focus</h3>
+        <ul>
+          <li>Confirm advanced analytics SKU alignment for FR-10 and FR-33 style position-in-time intelligence.</li>
+          <li>Confirm Gainsight L2R integration implementation pattern and real-time sync expectations.</li>
+          <li>Confirm corporate feed mechanics to Baseline Model/Hyperion for FR-35.</li>
+          <li>Confirm Slack/Agentforce collaboration boundaries for operational task orchestration claims.</li>
+        </ul>
+      </section>
+
+      <div class="progression">
+        <a href="salesforce-domains.html">← Previous: Salesforce Capability Domains</a>
+        <a href="next-steps.html">Next: Recommended Next Steps →</a>
+      </div>
+    </main>
+  </div>
+  <script src="shared-nav.js"></script>
+  <script src="enablement.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

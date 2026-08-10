@@ -30,10 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <li><a href="capability-map.html">Capability Sequencing</a></li>
       <li><a href="decision-framework.html">Executive Decision Framework</a></li>
       <li><a href="salesforce-domains.html">Salesforce Capability Domains</a></li>
+      <li><a href="requirements-coverage.html">Requirements Coverage Matrix</a></li>
     </ul>
     <div class="group-label">Appendix</div>
     <ul class="nav-list">
       <li><a href="next-steps.html">Recommended Next Steps</a></li>
+      <li><a href="license-validation.html">License & Validation</a></li>
       <li><a href="capability-terms.html">Capability Terms Guide</a></li>
       <li><a href="external-research.html">External Research</a></li>
       <li><a href="forward-looking-statement.html">Forward Looking Statement</a></li>

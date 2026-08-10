@@ -22,7 +22,9 @@ Open `index.html` directly in a browser, or run any lightweight static server fr
 - `capability-map.html` - Capability Sequencing
 - `decision-framework.html` - Executive Decision Framework
 - `salesforce-domains.html` - Salesforce Capability Domains
+- `requirements-coverage.html` - Requirements Coverage Matrix
 - `next-steps.html` - Recommended Next Steps
+- `license-validation.html` - License & Validation
 - `capability-terms.html` - Capability Terms Guide
 - `external-research.html` - External Research
 - `forward-looking-statement.html` - Forward Looking Statement
