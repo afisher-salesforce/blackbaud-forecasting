@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60">
+  <rect x="10" y="36" width="8" height="14" rx="2" fill="#0f5cab"/>
+  <rect x="22" y="26" width="8" height="24" rx="2" fill="#0f5cab"/>
+  <rect x="34" y="14" width="8" height="36" rx="2" fill="#0f5cab"/>
+  <text x="54" y="30" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#0f5cab">Blackbaud</text>
+  <text x="54" y="48" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#5b6473" letter-spacing="0.06em">FORECASTING</text>
+</svg>
