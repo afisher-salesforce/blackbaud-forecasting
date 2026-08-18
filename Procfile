@@ -1,1 +1,1 @@
-web: node artifacts/blackbaud-forecasting/server.js
+web: node server.js

@@ -9,7 +9,7 @@
   "scripts": {
     "build": "cd artifacts/blackbaud-forecasting && npm install && npm run build",
     "heroku-postbuild": "npm run build",
-    "start": "node artifacts/blackbaud-forecasting/server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.21.2"
