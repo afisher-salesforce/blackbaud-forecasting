@@ -140,9 +140,18 @@ function initEnablement() {
   });
 }
 
+function initDownloadPdf() {
+  const btn = document.getElementById("downloadPdf");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    window.print();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   setActiveNav();
   initNavToggle();
   initSearch();
   initEnablement();
+  initDownloadPdf();
 });
