@@ -38,17 +38,6 @@ const clerkPubKey = publishableKeyFromHost(
   import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
 );
 
-// REQUIRED — empty in dev (intentional), auto-set in prod. Do NOT gate on NODE_ENV.
-const clerkProxyUrl = import.meta.env.VITE_CLERK_PROXY_URL;
-
-const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-function stripBase(path: string): string {
-  return basePath && path.startsWith(basePath)
-    ? path.slice(basePath.length) || '/'
-    : path;
-}
-
 if (!clerkPubKey) {
   throw new Error('Missing VITE_CLERK_PUBLISHABLE_KEY');
 }
@@ -58,8 +47,8 @@ const clerkAppearance = {
   cssLayerName: 'clerk',
   options: {
     logoPlacement: 'inside' as const,
-    logoLinkUrl: basePath || '/',
-    logoImageUrl: `${window.location.origin}${basePath}/logo.svg`,
+    logoLinkUrl: '/',
+    logoImageUrl: `${window.location.origin}/logo.svg`,
   },
   variables: {
     colorPrimary: '#0f5cab',
@@ -109,8 +98,8 @@ function SignInPage() {
     <div className="flex min-h-[100dvh] items-center justify-center bg-[#f4f6f9] px-4">
       <SignIn
         routing="path"
-        path={`${basePath}/sign-in`}
-        signUpUrl={`${basePath}/sign-up`}
+        path="/sign-in"
+        signUpUrl="/sign-up"
       />
     </div>
   );
@@ -121,8 +110,8 @@ function SignUpPage() {
     <div className="flex min-h-[100dvh] items-center justify-center bg-[#f4f6f9] px-4">
       <SignUp
         routing="path"
-        path={`${basePath}/sign-up`}
-        signInUrl={`${basePath}/sign-in`}
+        path="/sign-up"
+        signInUrl="/sign-in"
       />
     </div>
   );
@@ -150,7 +139,7 @@ function ClerkQueryClientCacheInvalidator() {
 function DomainRejected() {
   const { signOut } = useClerk();
   useEffect(() => {
-    signOut({ redirectUrl: basePath || '/' });
+    signOut({ redirectUrl: '/' });
   }, [signOut]);
   return (
     <div className="flex min-h-[100dvh] items-center justify-center bg-[#f4f6f9] px-6">
@@ -223,10 +212,9 @@ function ClerkProviderWithRoutes() {
   return (
     <ClerkProvider
       publishableKey={clerkPubKey}
-      proxyUrl={clerkProxyUrl}
       appearance={clerkAppearance}
-      signInUrl={`${basePath}/sign-in`}
-      signUpUrl={`${basePath}/sign-up`}
+      signInUrl="/sign-in"
+      signUpUrl="/sign-up"
       localization={{
         signIn: {
           start: {
@@ -241,8 +229,8 @@ function ClerkProviderWithRoutes() {
           },
         },
       }}
-      routerPush={(to) => setLocation(stripBase(to))}
-      routerReplace={(to) => setLocation(stripBase(to), { replace: true })}
+      routerPush={(to) => setLocation(to)}
+      routerReplace={(to) => setLocation(to, { replace: true })}
     >
       <QueryClientProvider client={queryClient}>
         <ClerkQueryClientCacheInvalidator />
@@ -261,7 +249,7 @@ function ClerkProviderWithRoutes() {
 
 function App() {
   return (
-    <WouterRouter base={basePath}>
+    <WouterRouter>
       <ClerkProviderWithRoutes />
     </WouterRouter>
   );

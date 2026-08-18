@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useClerk, useUser } from '@clerk/react';
 import { Sidebar } from './Sidebar';
 
-const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
-
 function UserNav() {
   const { user } = useUser();
   const { signOut } = useClerk();
@@ -21,7 +19,7 @@ function UserNav() {
         Save as PDF
       </button>
       <button
-        onClick={() => signOut({ redirectUrl: basePath || '/' })}
+        onClick={() => signOut({ redirectUrl: '/' })}
         className="text-[13px] font-medium text-[#24344c] bg-[#eef2f7] hover:bg-[#d6dde8] px-3 py-1.5 rounded-lg transition-colors cursor-pointer border border-[#d6dde8] print:hidden"
       >
         Sign out
